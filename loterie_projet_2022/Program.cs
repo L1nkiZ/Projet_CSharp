@@ -1,7 +1,11 @@
+using loterie_projet_2022.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IMaClasse, MaClasse>();
+builder.Services.AddScoped<IHelperService, HelperService>();
 
 var app = builder.Build();
 
