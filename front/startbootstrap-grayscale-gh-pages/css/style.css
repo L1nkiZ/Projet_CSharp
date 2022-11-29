@@ -7,6 +7,9 @@ html{
 .purple{
     color:#7464a1;
 }
+.white{
+    color:#F8F8F8;
+}
 
 .masthead {
     position: relative;
@@ -47,18 +50,40 @@ html{
 }
 
 .btn-primary:hover {
-color: #F8F8F8;
-background-color: #00524c;
-border-color: #50817e;
+    color: #F8F8F8;
+    background-color: #00524c;
+    border-color: #50817e;
 }
 
 .btn-secondary {
     color: #fff;
     background-color: #7464a1;
     border-color: #7464a1;
-  }
-  .btn-secondary:hover {
+}
+
+.btn-secondary:hover {
     color: #fff;
     background-color: #635589;
     border-color: #5d5081;
-  }
+}
+
+.cercle {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: rgba(34, 34, 34, 0.95);
+}
+
+.joueur_tirage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.3);
+    font-size: 24px;
+    color: white;
+    line-height: 118px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+
