@@ -1,10 +1,10 @@
 html{
     font-family:Nunito;
 }
-.green{
+.text-primary{
     color : #00635D !important;
 }
-.purple{
+.text-secondary{
     color:#7464a1;
 }
 .white{
