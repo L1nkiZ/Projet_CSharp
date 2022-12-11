@@ -1,9 +1,24 @@
+using DataLayer;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+var connectionString = builder.Configuration.GetConnectionString("primaryDb");
+
+builder.Services.AddDbContext<DbContext>(options =>
+{
+    //Connection string :
+    options.UseSqlServer(connectionString);
+
+    //True log pas en Prod
+    options.EnableSensitiveDataLogging(true);
+
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
