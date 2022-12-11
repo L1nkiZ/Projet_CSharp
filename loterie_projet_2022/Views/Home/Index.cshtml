@@ -1,16 +1,35 @@
-﻿@model indexVueModel
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p>Model.Age</p>
-    <p>Model.Name</p>
-    <p>Model.Greetings</p>
-    <p>Model.GetCurrentDate</p>
-    <p>Model.GetCurrentTime</p>
+<!-- Timer + page d'accueil-->
+        <header class="masthead">
+            <div class="timer p-2">
+                <p class="text-center m-0 timer_number">4:50</p>
+                <p class="text-center fs-5 m-0">avant le prochain tirage</p>
+            </div>
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase text-primary ">COIN & GO</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5 text-primary opacity">Jeux de loterie en ligne !</h2>
+                        <a class="btn btn-primary" href="#game">Jouer !</a>
+                    </div>
+                </div>
+            </div>
 
-</div>
+
+            <div class="container d-flex justify-content-center code_result mt-5">
+                <div class="d-flex justify-content-center">
+                    <form>
+                        <div class="text-center">
+                            <div class="mt-5">
+                                <div class="text-center">
+                                    Pour entrez votre code, <a href="#result">Cliquez-ici</a> !
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
