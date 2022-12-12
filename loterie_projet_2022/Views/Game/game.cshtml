@@ -1,4 +1,4 @@
-﻿@{
+﻿    @{
     ViewData["Title"] = "Home Page";
 }
 
@@ -16,71 +16,22 @@
         <div class="grille">
             <table class="table table-borderless">
                 <tbody>
-                    <tr>
-                        <td class="" id="1"><div class="cercle white text-center p-2">1</div></td>
-                        <td class="" id="2"><div class="cercle white text-center p-2">2</div></td>
-                        <td class="" id="3"><div class="cercle white text-center p-2">3</div></td>
-                        <td class="" id="4"><div class="cercle white text-center p-2">4</div></td>
-                        <td class="" id="5"><div class="cercle white text-center p-2">5</div></td>
-                        <td class="" id="6"><div class="cercle white text-center p-2">6</div></td>
-                        <td class="" id="7"><div class="cercle white text-center p-2">7</div></td>
-                    </tr>
-                    <tr>
-                        <td class="" id="8"><div class="cercle white text-center p-2">8</div></td>
-                        <td class="" id="9"><div class="cercle white text-center p-2">9</div></td>
-                        <td class="" id="10"><div class="cercle white text-center p-2">10</div></td>
-                        <td class="" id="11"><div class="cercle white text-center p-2">11</div></td>
-                        <td class="" id="12"><div class="cercle white text-center p-2">12</div></td>
-                        <td class="" id="13"><div class="cercle white text-center p-2">13</div></td>
-                        <td class="" id="14"><div class="cercle white text-center p-2">14</div></td>
-                    </tr>
-                    <tr>
-                        <td class="" id="15"><div class="cercle white text-center p-2">15</div></td>
-                        <td class="" id="16"><div class="cercle white text-center p-2">16</div></td>
-                        <td class="" id="17"><div class="cercle white text-center p-2">17</div></td>
-                        <td class="" id="18"><div class="cercle white text-center p-2">18</div></td>
-                        <td class="" id="19"><div class="cercle white text-center p-2">19</div></td>
-                        <td class="" id="20"><div class="cercle white text-center p-2">20</div></td>
-                        <td class="" id="21"><div class="cercle white text-center p-2">21</div></td>
-                    </tr>
-                    <tr>
-                        <td class="" id="22"><div class="cercle white text-center p-2">22</div></td>
-                        <td class="" id="23"><div class="cercle white text-center p-2">23</div></td>
-                        <td class="" id="24"><div class="cercle white text-center p-2">24</div></td>
-                        <td class="" id="25"><div class="cercle white text-center p-2">25</div></td>
-                        <td class="" id="26"><div class="cercle white text-center p-2">26</div></td>
-                        <td class="" id="27"><div class="cercle white text-center p-2">27</div></td>
-                        <td class="" id="28"><div class="cercle white text-center p-2">28</div></td>
-                    </tr>
-                    <tr>
-                        <td class="" id="29"><div class="cercle white text-center p-2">29</div></td>
-                        <td class="" id="30"><div class="cercle white text-center p-2">30</div></td>
-                        <td class="" id="31"><div class="cercle white text-center p-2">31</div></td>
-                        <td class="" id="32"><div class="cercle white text-center p-2">32</div></td>
-                        <td class="" id="33"><div class="cercle white text-center p-2">33</div></td>
-                        <td class="" id="34"><div class="cercle white text-center p-2">34</div></td>
-                        <td class="" id="35"><div class="cercle white text-center p-2">35</div></td>
-                    </tr>
-                    <tr>
-                        <td class="" id="36"><div class="cercle white text-center p-2">36</div></td>
-                        <td class="" id="37"><div class="cercle white text-center p-2">37</div></td>
-                        <td class="" id="38"><div class="cercle white text-center p-2">38</div></td>
-                        <td class="" id="39"><div class="cercle white text-center p-2">39</div></td>
-                        <td class="" id="40"><div class="cercle white text-center p-2">40</div></td>
-                        <td class="" id="41"><div class="cercle white text-center p-2">41</div></td>
-                        <td class="" id="42"><div class="cercle white text-center p-2">42</div></td>
-                    </tr>
-                    <tr>
-                        <td class="" id="43"><div class="cercle white text-center p-2">43</div></td>
-                        <td class="" id="44"><div class="cercle white text-center p-2">44</div></td>
-                        <td class="" id="45"><div class="cercle white text-center p-2">45</div></td>
-                        <td class="" id="46"><div class="cercle white text-center p-2">46</div></td>
-                        <td class="" id="47"><div class="cercle white text-center p-2">47</div></td>
-                        <td class="" id="48"><div class="cercle white text-center p-2">48</div></td>
-                        <td class="" id="49"><div class="cercle white text-center p-2">49</div></td>
-                    </tr>
+                    @for (int i = 1; i <= 7; i++)
+                    {
+                        <tr>  
+                            @for (int j = 1; j <= 7; j++)
+                            {
+                                <td class="">
+                                    <div onclick="getNumberID(@((i - 1) * 7 + j))" id="@((i - 1) * 7 + j)" class="cercle white text-center p-2">@((i - 1) * 7 + j)<div>
+                                </td>
+                            }
+                        </tr>
+                    }
                 </tbody>
             </table>
+
+
+                       
 
             <div class="row justify-content-center mt-5" id="lotto">
                 <span class="joueur_tirage mx-4">2</span>
@@ -92,8 +43,11 @@
             </div>
 
             <div class="d-flex justify-content-center mt-5">
-                <button class="btn btn-primary mx-5" id="submitButton" type="submit">Validé</button>
-                <button class="btn btn-secondary mx-5" id="submitButton" type="submit">Réinitialiser</button>
+                <form method="post" action="Game" id="formInput">
+                    <input name="player_number" type="text" hidden/>
+                    <button class="btn btn-primary mx-5" id="submitButton" type="submit">Validé</button>
+                    <button class="btn btn-secondary mx-5" id="submitButton" type="submit">Réinitialiser</button>
+                </form>
             </div>
         </div>
 

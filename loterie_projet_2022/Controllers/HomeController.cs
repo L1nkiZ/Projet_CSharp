@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using loterie_projet_2022.Models;
-
+using Microsoft.Extensions.Logging;
 
 namespace loterie_projet_2022.Controllers;
 
@@ -14,7 +14,7 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult index()
     {
         return View();
     }

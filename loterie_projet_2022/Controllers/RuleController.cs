@@ -4,7 +4,7 @@ namespace loterie_projet_2022.Controllers
 {
     public class RuleController : Controller
     {
-        public IActionResult Index()
+        public IActionResult rule()
         {
             return View();
         }

@@ -1,4 +1,6 @@
-﻿namespace loterie_projet_2022.Models
+﻿using System.Collections.Generic;
+
+namespace loterie_projet_2022.Models
 {
     public class GameViewModel
     {
