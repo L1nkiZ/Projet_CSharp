@@ -1,4 +1,6 @@
 ﻿using loterie_projet_2022.services.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace loterie_projet_2022.services
 {

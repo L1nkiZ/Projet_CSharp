@@ -90,4 +90,8 @@ html{
     height:auto;
 }
 
+.checked {
+    background: #00635D;
+}
+
 
