@@ -3,6 +3,7 @@ player_number = []
 function getNumberID(id) {
     var element = document.getElementById(id);
     element.classList.add("mystyle");
+
     if (this.player_number.length < 6 && this.player_number.includes(id) === false) {
 
         this.player_number.push(id)
@@ -19,6 +20,15 @@ function getNumberID(id) {
     else {
         console.log("c'est non")
     }
+}
+
+function reset() {
+    const classes = document.querySelectorAll('.checked')
+
+    classes.forEach(c => {
+        c.classList.remove('checked');
+    });
+    this.player_number = []
 }
 
 document.getElementById('formInput').addEventListener('submit', (e) => {

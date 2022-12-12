@@ -30,24 +30,12 @@
                 </tbody>
             </table>
 
-
-                       
-
-            <div class="row justify-content-center mt-5" id="lotto">
-                <span class="joueur_tirage mx-4">2</span>
-                <span class="joueur_tirage mx-4">26</span>
-                <span class="joueur_tirage mx-4">40</span>
-                <span class="joueur_tirage mx-4">10</span>
-                <span class="joueur_tirage mx-4">6</span>
-                <span class="joueur_tirage mx-4">33</span>
-            </div>
-
             <div class="d-flex justify-content-center mt-5">
                 <form method="post" action="Game" id="formInput">
                     <input name="player_number" type="text" hidden/>
                     <button class="btn btn-primary mx-5" id="submitButton" type="submit">Validé</button>
-                    <button class="btn btn-secondary mx-5" id="submitButton" type="submit">Réinitialiser</button>
                 </form>
+                <button class="btn btn-secondary mx-5" id="resetButton" onclick="reset()">Réinitialiser</button>
             </div>
         </div>
 
