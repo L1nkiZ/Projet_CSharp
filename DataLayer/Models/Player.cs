@@ -1,10 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataLayer.Models
 {
     public class Player
     {
+        [Key]
         public int player_id { get; set; }
+        [Required]
         public string guid_code { get; set; }
         public string num_draw_player { get; set; }
         public int score { get; set; }

@@ -6,11 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-
 var connectionString = builder.Configuration.GetConnectionString("primaryDb");
 
-builder.Services.AddDbContext<DbContext>(options =>
+builder.Services.AddDbContext<LoterieDbContext>(options =>
 {
     //Connection string :
     options.UseSqlServer(connectionString);
@@ -19,6 +17,8 @@ builder.Services.AddDbContext<DbContext>(options =>
     options.EnableSensitiveDataLogging(true);
 
 });
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
