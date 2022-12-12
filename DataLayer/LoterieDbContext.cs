@@ -1,12 +1,5 @@
 ﻿using DataLayer.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-// df
 
 namespace DataLayer
 {
@@ -17,8 +10,8 @@ namespace DataLayer
 
         }
 
-        public DbSet<Game> Game { get; set; }
-        public DbSet<Player> Player { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Player> Players { get; set; }
     }
 
     // dotnet ef migrations add initial -p .\DataLayer\DataLayer.csproj -s .\loterie_projet_2022\loterie_projet_2022.csproj --context LoterieDbContext --output-dir Migrations

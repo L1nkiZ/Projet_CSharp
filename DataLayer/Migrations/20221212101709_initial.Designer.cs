@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(LoterieDbContext))]
-    [Migration("20221212094122_initial")]
+    [Migration("20221212101709_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -40,12 +40,11 @@ namespace DataLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("num_draw")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("game_id");
 
-                    b.ToTable("Game");
+                    b.ToTable("Games");
                 });
 
             modelBuilder.Entity("DataLayer.Models.Player", b =>
@@ -60,11 +59,9 @@ namespace DataLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("guid_code")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("num_draw_player")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("score")
@@ -74,7 +71,7 @@ namespace DataLayer.Migrations
 
                     b.HasIndex("game_id");
 
-                    b.ToTable("Player");
+                    b.ToTable("Players");
                 });
 
             modelBuilder.Entity("DataLayer.Models.Player", b =>

@@ -4,7 +4,7 @@ namespace loterie_projet_2022.Models
 {
     public class GameViewModel
     {
-        public List<string> numbers_selected { get; set; }
+        public string player_number { get; set; }
         
     }
 }

@@ -1,8 +1,7 @@
-player_number = []
+var player_number = []
 
 function getNumberID(id) {
     var element = document.getElementById(id);
-    element.classList.add("mystyle");
 
     if (this.player_number.length < 6 && this.player_number.includes(id) === false) {
 
@@ -35,7 +34,16 @@ document.getElementById('formInput').addEventListener('submit', (e) => {
 
     e.preventDefault();
 
+    if (player_number.length == 6) {
 
+        String_player_number = player_number.toString();
+        
+        document.getElementById("player_number").value = String_player_number;
+        console.log(document.getElementById("player_number").value)
+    }
+
+        
+    document.getElementById('formInput').submit();
 
 });
         
