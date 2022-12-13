@@ -15,5 +15,6 @@ namespace DataLayer.Models
         [ForeignKey(nameof(game_id))]
 
         public Game game { get; set; }
+        public object ShortGuid { get; set; }
     }
 }

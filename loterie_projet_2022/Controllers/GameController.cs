@@ -28,7 +28,7 @@ namespace loterie_projet_2022.Controllers
 
             var result = _gameService.checkTirage(model);
             //vue des réusultats plus tard -> reddirect to actions
-            return View("Result", result);
+            return RedirectToAction("Result", result);
             //ceée une method httpget 
 
         }
