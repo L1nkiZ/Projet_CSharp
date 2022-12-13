@@ -94,4 +94,6 @@ html{
     background: #00635D;
 }
 
-
+.min-vh-17 {
+    min-height: 17vh !important;
+}
