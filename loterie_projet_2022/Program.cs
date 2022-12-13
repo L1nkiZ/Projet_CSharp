@@ -1,4 +1,6 @@
 using DataLayer;
+using loterie_projet_2022.services.Interfaces;
+using loterie_projet_2022.services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -6,9 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("primaryDb");
 
@@ -21,6 +20,12 @@ builder.Services.AddDbContext<LoterieDbContext>(options =>
     options.EnableSensitiveDataLogging(true);
 
 });
+
+// Add services to the container.
+builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddControllersWithViews();
+
+
 
 var app = builder.Build();
 

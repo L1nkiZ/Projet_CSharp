@@ -4,9 +4,9 @@ namespace loterie_projet_2022.Controllers
 {
     public class ResultController : Controller
     {
-        public IActionResult result()
+        public IActionResult result(string result)
         {
-            return View();
+            return View(result);
         }
     }
 }
