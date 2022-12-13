@@ -1,1 +1,0 @@
-//bnt check (checkbox)cliqué -> add element html -> name element prend le nom de la liste
