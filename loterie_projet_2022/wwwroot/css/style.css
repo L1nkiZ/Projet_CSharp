@@ -86,4 +86,14 @@ html{
     border: 2px solid white;
 }
 
+.padding{
+    height:auto;
+}
 
+.checked {
+    background: #00635D;
+}
+
+.min-vh-17 {
+    min-height: 17vh !important;
+}
