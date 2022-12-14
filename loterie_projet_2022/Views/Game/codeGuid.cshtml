@@ -12,8 +12,8 @@
                 <h2 class="text-white mb-5">Votre code GUID à convervé :</h2>
                 <form class="form-signup" id="">
                     <div class="row input-group-newsletter">
-                        <div class="col"><input class="form-control" id="result_code" value="@Model.GUID" placeholder="Entrez votre code ..." /></div>
-                        <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Validé !</button></div>
+                        <div class="col"><input class="form-control" id="inputCodeGUID" value="@Model.GUID" placeholder="Votre code à été copier ..." /></div>
+                        <div class="col-auto"><button class="btn btn-secondary" id="submitButton" type="submit" onclick="copieText()">Copié le texte !</button></div>
                     </div>
                 </form>
             </div>
