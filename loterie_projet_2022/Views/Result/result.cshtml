@@ -23,11 +23,21 @@
 
 @if (Model.player != null)
 {
-    
-
 <section class="contact-section bg-black">
-    <div class="container px-4 px-lg-5">
+    <div class="container px-4 px-lg-4">
         <div class="row gx-4 gx-lg-5">
+            <section class="projects-section-5">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                        <div class="col-xl-4 col-lg-">
+                            <div class="barre text-center text-lg-left b-white">
+                                <h4 class="text-uppercase">Tirage gagnant : </h4>
+                                <p class="text-black-50 mb-0">@Model.game.num_draw</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <div class="col-md-4 mb-3 mb-md-0">
                 <div class="card py-4 h-100">
                     <div class="card-body text-center">
@@ -44,7 +54,7 @@
                         <i class="fa-solid fa-coins text-primary mb-2"></i>
                         <h4 class="text-uppercase m-0">Gain</h4>
                         <hr class="my-4 mx-auto" />
-                        <div class="text-black-50">Vous avez gagné 80 coins !</div>
+                            <div class="text-black-50">Vous avez gagné @Model.game.choux choux !</div>
                     </div>
                 </div>
             </div>

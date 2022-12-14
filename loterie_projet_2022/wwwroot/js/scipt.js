@@ -58,3 +58,11 @@ function copieText() {
     // Copy the text inside the text field
     navigator.clipboard.writeText(copyText.value);
 }
+
+function transformDate(dateString) {
+
+    const dateObject = new Date(Date.parse(dateString));
+    const date = dateObject.toLocaleDateString('fr-FR');
+
+    return date;
+}
