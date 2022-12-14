@@ -23,6 +23,7 @@ builder.Services.AddDbContext<LoterieDbContext>(options =>
 
 // Add services to the container.
 builder.Services.AddScoped<IGameService, GameService>();
+builder.Services.AddScoped<IResultService, ResultService>();
 builder.Services.AddControllersWithViews();
 
 

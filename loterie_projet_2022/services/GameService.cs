@@ -42,7 +42,7 @@ namespace loterie_projet_2022.services
 
             var objGridPlayer = new Player()
             {
-                guid_code = ShortGuid.NewGuid(),
+                guid_code = ShortGuid.NewGuid().ToString(),
                 num_draw_player = model.player_number,
                 game_id = lastGame.game_id,
             };

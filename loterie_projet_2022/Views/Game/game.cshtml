@@ -1,7 +1,9 @@
 ﻿ @model GameViewModel;  
  @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Game Page";
 }
+
+
 <!-- Régles du jeu-->
 <section class="about-section text-center test" id="rules">
     <div class="container px-4 px-lg-5">
@@ -53,6 +55,20 @@
             </div>
         </div>
 
+    </div>
+</section>
+
+<section class="signup-section" id="result">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+                <form class="form-signup" id="">
+                    <div class="row input-group-newsletter">
+                        <div class="col"><input class="form-control" id="result_code" placeholder="Votre code s'affichera ici ..." /></div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 

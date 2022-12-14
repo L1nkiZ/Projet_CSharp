@@ -15,21 +15,40 @@ namespace loterie_projet_2022.Controllers
             _gameService = gameService;
         }
 
-        [HttpGet]
-        //ceée une method httpget 
+        //[HttpGet]
+        //public IActionResult game(string result)
+        //{
+        //    var result_short_guid = new GameViewModel()
+        //    {
+        //        guid_code = result
+        //    };
+
+        //    return View("Result", result_short_guid);
+        //}
+
         public IActionResult game()
         {
             return View();
         }
-        
+
         [HttpPost]
         public IActionResult game(GameViewModel model)
         {
 
             var result = _gameService.checkTirage(model);
+            codeGUIDViewModel modelGUID = new codeGUIDViewModel();
+            modelGUID.GUID = result;
             //vue des réusultats plus tard -> reddirect to actions
-            return RedirectToAction("Result", result);
+            //return RedirectToAction("codeGuid", new { view_code_guid_result = result});
+            return RedirectToAction("codeGuid", modelGUID);
             //ceée une method httpget 
+
+        }
+
+        [HttpGet]
+        public IActionResult codeGuid(codeGUIDViewModel modelGUID)
+        {
+            return View(modelGUID);
 
         }
     }
