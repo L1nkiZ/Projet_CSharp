@@ -1,6 +1,7 @@
 template : https://startbootstrap.com/previews/grayscale
 
 Couleur : 
-    - Vert :    00635D
-    - Blanc :   F8F8F8
-    - Noir :    01172F
+    - Primaire (Vert) :    #00635D
+    - Secondaire (Violet):   #7464a1
+    - Blanc : #F8F8F8
+    - Noir : #030303
