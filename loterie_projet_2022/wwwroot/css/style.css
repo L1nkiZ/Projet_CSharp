@@ -11,6 +11,10 @@ html{
     color:#F8F8F8;
 }
 
+.b-white {
+    background: #F8F8F8;
+}
+
 .masthead {
     position: relative;
     width: 100%;
@@ -98,3 +102,11 @@ html{
     min-height: 42vh !important;
 }
 
+.projects-section-5 {
+    padding: 5rem 0;
+}
+
+.barre {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #7464a1;
+}
