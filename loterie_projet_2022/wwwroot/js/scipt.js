@@ -46,4 +46,15 @@ document.getElementById('formInput').addEventListener('submit', (e) => {
     document.getElementById('formInput').submit();
 
 });
-        
+
+
+function copieText() {
+    // Get the text field
+    var copyText = document.getElementById("inputCodeGUID");
+
+    // Select the text field
+    copyText.select();
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+}
